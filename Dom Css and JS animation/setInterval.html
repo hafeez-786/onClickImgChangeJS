@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    #container {
+  position:relative;
+  width:300px;
+  height:300px;
+  background: yellow;
+}
+#animate {
+  position:absolute;
+  width:80px;
+  height:80px;
+  background:red;
+  text-align:center;
+  color:#fff;
+  font-weight:bold;
+  font-family:'arial';
+}
+#happo {
+  position:absolute;
+  top: 220px;
+  right:0px;
+  width:80px;
+  height:80px;
+  background:red;
+  text-align:center;
+  color:#fff;
+  font-weight:bold;
+  font-family:'arial';
+}
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="animate">
+      <p>Farah<br><span id="pera">Mumbai</span></p>
+    </div>
+    <div id="happo">Hafeez<br>Saidpur</div>
+  </div>
+  <br>
+  <button onclick="moveOn()">Click me</button>
+
+  <script>
+    function moveOn() {
+    var smallBox = document.getElementById('animate');
+    var pos = 0;
+    var myInterval = setInterval(frame, 20);
+     function frame() {
+      if(pos == 185) {
+       clearInterval(myInterval);
+       document.getElementById('pera').style.display = "none";
+     }
+      pos++;
+      smallBox.style.top = pos + "px";
+      smallBox.style.left = pos + "px";
+    }
+  }
+
+  </script>
+</body>
+</html>

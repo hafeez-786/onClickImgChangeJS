@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<title>Demo</title>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="main-img" style="text-align: center;">
+      <img src="img/headphone1.jpg" class="img-pro"/>
+    </div>
+    <div class="img-item">
+      <div class="img-block active" onclick="chnageImage(this)">
+        <img src="img/headphone1.jpg" alt="thumb" />
+      </div>
+      <div class="img-block" onclick="chnageImage(this)"><img src="img/headphone2.jpg" class="" alt="thumb" /></div>
+      <div class="img-block" onclick="chnageImage(this)"><img src="img/headphone3.jpg" class="" alt="thumb" /></div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    const thumbs = document.querySelector(".img-item").children;
+    function chnageImage(event) {
+       document.querySelector(".img-pro").src = event.children[0].src;
+       for(let i = 0; i < thumbs.length; i++) {
+         thumbs[i].classList.remove("active");
+       }
+       event.classList.add("active")
+    }
+  </script>
+</body>
+
+</html>

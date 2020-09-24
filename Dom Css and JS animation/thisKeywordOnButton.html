@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="scripts/tutorial.js"></script>
+	<title>TypeScript</title>
+</head>
+<body>
+<!-- <button type="button" onclick="countVowels(name)">Click</button> -->
+<p id="demo">How to use this keyword</p>
+
+<button class="btn">button1</button>
+<button class="btn">button2</button>
+<button class="btn">button3</button>
+<button class="btn">button4</button>
+
+<script>
+	/*var button = document.getElementById('btn');
+	var result = document.getElementById('demo');
+  button.onclick = function() {
+  	this.innerHTML =  'Cliked';
+  	result.innerHTML = 'Wow u undestood about this keyword!';
+  	console.log(this);
+  }*/
+
+ var buttonName = document.getElementsByClassName('btn');
+ var result = document.getElementById('demo');
+ for (var i = 0; i < buttonName.length; i++) {
+ 	buttonName[i].onclick = function() {
+    result.innerHTML = this.innerHTML;
+    //console.log(this);
+ 	}
+ }
+</script>
+
+
+<!-- <script>
+	var person = {
+		firstName: 'John',
+		lastName: 'Doe',
+		language: 'English',
+		get lang() {
+			return this.language;
+		}
+	};
+	document.getElementById('demo').innerHTML = person.lang;
+
+	// example 2 using SET keyword 
+
+	var person = {
+  firstName: "John",
+  lastName : "Doe",
+  language : "NO",
+  set lang(value) {
+    this.language = value;
+  }
+};
+// Set a property using set:
+person.lang = "en";
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.language;
+</script> -->
+</body>
+</html>

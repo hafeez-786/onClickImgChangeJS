@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/animation.css">
+<style>
+/* The Modal (background) */
+
+</style>
+</head>
+
+<body>
+ <div class="myDiv animated bounceInRight" id="divMy">
+   <button class="btn animated shake">Close</button>
+   <div class="content" id="pera">Welcome Back!<br>Hafeez</div>
+ </div>
+ <br><br>
+ <button class="close" id="closeBtn">Click</button>
+</body>
+<script>
+  var closeB = document.getElementById('closeBtn');
+  var mydiv = document.getElementById('divMy');
+  var Pgraph = document.getElementById('pera'); 
+  var button = document.getElementsByClassName('btn')[0];
+
+  closeB.onclick = function() {
+    mydiv.style.display = "block";
+  }
+  button.onclick = function() {
+    mydiv.style.display = "none";
+  }
+
+  window.onclick = function(e) {
+    if (e.target == mydiv) {
+        mydiv.style.display = "none";
+    }
+  }
+</script>
+
+<style type="text/css">
+  .myDiv {
+    width: 300px;
+    height: 150px;
+    background: #ff0;
+    position: relative;
+    display: none;
+    -webkit-animation-duration: 15s;
+  }
+  .content {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 60px;
+  }
+  .btn {
+    color: white;
+    background: blue;
+    width: 50px;
+    height: 36px;
+    position: absolute;
+    border: 0px;
+    border-radius: 6px;
+    right: -22px;
+  }
+  .close {
+    color: white;
+    background: blue;
+    width: 50px;
+    height: 36px;
+    border: 0px;
+    border-radius: 6px;
+  }
+</style>
+</body>
+</html>
+
